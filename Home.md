@@ -1,4 +1,4 @@
-####Arduino STM32 add the ability to develop for STM32F103 based boards within the Arduino IDE
+####Arduino STM32 adds the ability to develop for STM32F103 based boards to the Arduino IDE
 
 
 [Installation](https://github.com/rogerclarkmelbourne/Arduino_STM32/wiki/Installation)
