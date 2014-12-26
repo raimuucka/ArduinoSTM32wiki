@@ -3,12 +3,12 @@ Arduino STM32 provides allows development of STM32F103 based boards within the A
 
 [Installation](https://github.com/rogerclarkmelbourne/Arduino_STM32/wiki/Installation)
 
-[Supported hardware](https://github.com/rogerclarkmelbourne/Arduino_STM32/wiki/)
+[Supported hardware](https://github.com/rogerclarkmelbourne/Arduino_STM32/wiki/Supported-hardware)
 
-[Supported operating system](https://github.com/rogerclarkmelbourne/Arduino_STM32/wiki/)
+[Supported operating systems](https://github.com/rogerclarkmelbourne/Arduino_STM32/wiki/Supported-operating-systems)
 
-[Upload / programming methods](https://github.com/rogerclarkmelbourne/Arduino_STM32/wiki/)
+[Upload and programming methods](https://github.com/rogerclarkmelbourne/Arduino_STM32/wiki/Upload-/-programming methods)
 
-[Credits and history](https://github.com/rogerclarkmelbourne/Arduino_STM32/wiki/)
+[Credits and history](https://github.com/rogerclarkmelbourne/Arduino_STM32/wiki/Credits-and-history)
 
 
