@@ -8,7 +8,7 @@
 
 ##### Maple and Maple mini windows drivers
 
-Please see his page on how to install the [Maple and Maple mini drivers](Maple-and-Maple-mini-drivers)
+Please see his page on how to install the [Maple drivers](https://github.com/rogerclarkmelbourne/Arduino_STM32/wiki/Maple-drivers)
 
 Windows users can also watch [this video I did on Youtube](https://www.youtube.com/watch?v=-zwGnytGT8M), it refers to version 1.5.8 of the IDE, which was the current version when I did the video, however its equally applicable to 1.6.rc1 except the download location for the IDE is different. 
 
