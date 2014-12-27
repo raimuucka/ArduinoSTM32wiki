@@ -1,6 +1,4 @@
-* Windows 7
-* Windows 8
+* Windows 7,8,8.1
 * Mac OSX (Details to be confirmed)
 * Linux (Details to be confirm)
-* Windows Vista (probably works)
-* Windows XP (probably works)
+* Windows XP,Vista (probably works, but not tested)
