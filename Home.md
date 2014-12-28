@@ -9,6 +9,8 @@
 
 [Uploading](https://github.com/rogerclarkmelbourne/Arduino_STM32/wiki/Uploading)
 
+https://github.com/rogerclarkmelbourne/Arduino_STM32/wiki/Porting-code-written-for-the-original-Maple-API
+
 [Credits and history](https://github.com/rogerclarkmelbourne/Arduino_STM32/wiki/Credits-and-history)
 
 
