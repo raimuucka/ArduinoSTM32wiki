@@ -1,6 +1,6 @@
 The original Maple IDE used some non-standard API calls, including SerialUSB and also the requirement to instantiate HardwareSPI in the sketch.
 
-SerialUSB on Maple builds has now been changed to Serial.  Serial1 is Hardware serial1, Serial2 is Hardware serial2
+SerialUSB on Maple builds has now been changed to Serial.  Serial1 is Hardware serial 1, Serial2 is Hardware serial 2 etc (all 4 hardware serial channels are available)
 
 To use SPI, just include <SPI.h> and use the global instance SPI which is created in the SPI class. i.e This is the normal Arduino way to use SPI.
 
