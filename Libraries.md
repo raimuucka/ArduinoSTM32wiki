@@ -2,7 +2,7 @@ Currently the libraries that come with the IDE work, (with some caveats), Howeve
 
 ####Built-in and Maple specific libraries
 
-* SPI. Working, but lacks full Transaction support. Transactional SPI is a new feature to Arduino 1.5+. Full support for Transactional SPI should be available soon.
+* SPI. Partially working. But missing attachInterrupt and detachInterrupt, and also lacks full Transaction support. Transactional SPI is a new feature to Arduino 1.5+. Full support for Transactional SPI should be available soon.
 * I2C. Working, but is a software implementation, and has a maximum speed of around 250kbps. Speed improvements 
 * EEPROM. Untested. An EEPROM library written for the Maple IDE is part of the repository, but has not been tested its likely it doesn't work.
 * FreeRTOS. Untested. Sources from the original Maple IDE installer. (see also http://forums.leaflabs.com/topic.php?id=221)
