@@ -1,4 +1,4 @@
-####Arduino STM32 adds the ability to develop for STM32F103 based boards to the Arduino 1.6 IDE
+####Arduino STM32 adds the ability to develop for STM32F103 based boards, including the Maple and Maple mini using the Arduino 1.6 IDE
 
 [Installation](https://github.com/rogerclarkmelbourne/Arduino_STM32/wiki/Installation)
 
