@@ -26,9 +26,15 @@ Install DFU-Utils
 
 Note. Please read the uploading section related to uploading when using Linux.
 
-###Mac OSX
+####Mac OSX
 
+Download from  http://downloads.arduino.cc/arduino-1.6.0rc1-macosx.zip 
 
+Install DFU Utils. The easiest way to do this is to use Homebrew  http://brew.sh/ - see the bottom of the Homebrew page.
+Then type "brew install dfu-util" in the terminal window to install
+See also http://dfu-util.sourceforge.net/
+
+Note. The if you install DFU Utils using another method than Homebrew the installed location may be different, and you may need to edit the scripts in the tools/osx folder
 
 
 ####Other operating systems see download links here
