@@ -1,8 +1,10 @@
-Under Windows, Additional drivers need to be loaded to support the Maple / Maple mini upload process.
-Unfortunately the drivers are not "signed" and by default Windows 7 and newer versions require signed drivers, and the maple drivers won't load.
+##Windows
 
-The only reliable work-around under Widows 7, appears to be to disable the device driver signing enforcement during boot - by pressing F8
+If using Maple or Maple mini, you will need to install the drivers in drivers/win folder.
 
-Other solutions may work for some people e.g. as documented here  http://www.killertechtips.com/2009/05/06/disable-driver-signing-in-windows-7-using-group-policy-editor/ .
+Maple and Maple mini use drivers which come as standard on Windows 7 or newer, however USB VID/PID numbers of the Maple boards need to be associated with the relevant drivers, and Windows 7 and newer also require that the drivers and inf files need to be "signed". 
 
-Windows 8 / 8.1 appear to be able to permanently disable the device driver signing requirement. For example, as documented here https://learn.sparkfun.com/tutorials/disabling-driver-signature-on-windows-8/disabling-signed-driver-enforcement-on-windows-8
+This is a complex process, but has been made seamless thanks to the work of @timschuerewegen who created a modified version of dwi-simple (See https://github.com/pbatard/libwdi. I will add the modified sources to the repo when I get around to it.)
+
+Run the install_drivers.bat file, which runs dwi-simple.exe twice, once to install the usb serial device and once to install the DFU device. 
+
