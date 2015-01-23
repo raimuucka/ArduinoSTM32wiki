@@ -9,7 +9,12 @@
 
 ##### Maple and Maple mini windows drivers
 
-If using Maple or Maple mini, you will need to install the drivers in drivers/win folder. Maple and Maple mini use drivers which come as standard on Windows 7 or newer, however USB VID/PID numbers of the Maple boards need to be associated with the relevant drivers, and Windows 7 and newer also require that the drivers and inf files need to be "signed". This is a complex process, but has been made seamless thanks to the work of @timschuerewegen who created a modified version of dwi-simple (To Do . link to DWI)
+If using Maple or Maple mini, you will need to install the drivers in drivers/win folder.
+
+Maple and Maple mini use drivers which come as standard on Windows 7 or newer, however USB VID/PID numbers of the Maple boards need to be associated with the relevant drivers, and Windows 7 and newer also require that the drivers and inf files need to be "signed". 
+
+This is a complex process, but has been made seamless thanks to the work of @timschuerewegen who created a modified version of dwi-simple (See https://github.com/pbatard/libwdi. I will add the modified sources to the repo when I get around to it.)
+
 Run the install_drivers.bat file, which runs dwi-simple.exe twice, once to install the usb serial device and once to install the DFU device. 
 
 ####Linux
@@ -31,13 +36,16 @@ Note. Please read the uploading section related to uploading when using Linux.
 Download from  http://downloads.arduino.cc/arduino-1.6.0rc1-macosx.zip 
 
 Install DFU Utils. The easiest way to do this is to use Homebrew  http://brew.sh/ - see the bottom of the Homebrew page.
+
 Then type "brew install dfu-util" in the terminal window to install
+
 See also http://dfu-util.sourceforge.net/
 
 Note. The if you install DFU Utils using another method than Homebrew the installed location may be different, and you may need to edit the scripts in the tools/osx folder
 
 
 ####Other operating systems see download links here
+
 [https://groups.google.com/a/arduino.cc/forum/#!topic/developers/2_GD40Sl6FA](https://groups.google.com/a/arduino.cc/forum/#!topic/developers/2_GD40Sl6FA)
 
 Then follow the windows instructions
