@@ -4,18 +4,8 @@
 * Download zip file containing the STM32 files from [here](https://github.com/rogerclarkmelbourne/Arduino_STM32/archive/master.zip)
 * Unzip to create the Arduino_STM32 folder
 * Copy the Arduino_STM32 folder to My Documents/Arduino/hardware (note. if the hardware folder doesn't exist you will need to create it)
-* If using Maple or Maple mini under windows see below
+* If using Maple or Maple mini under windows the Maple Drivers page
 * Start the Arduino IDE, and select the appropriate board from the Tools -> Board menu, and select the appropriate Com port.
-
-##### Maple and Maple mini windows drivers
-
-If using Maple or Maple mini, you will need to install the drivers in drivers/win folder.
-
-Maple and Maple mini use drivers which come as standard on Windows 7 or newer, however USB VID/PID numbers of the Maple boards need to be associated with the relevant drivers, and Windows 7 and newer also require that the drivers and inf files need to be "signed". 
-
-This is a complex process, but has been made seamless thanks to the work of @timschuerewegen who created a modified version of dwi-simple (See https://github.com/pbatard/libwdi. I will add the modified sources to the repo when I get around to it.)
-
-Run the install_drivers.bat file, which runs dwi-simple.exe twice, once to install the usb serial device and once to install the DFU device. 
 
 ####Linux
 Download and install from either
