@@ -3,14 +3,14 @@
 * Download and install the latest stable version of the Arduino Beta from [here](http://downloads.arduino.cc/arduino-1.6.0rc1-windows.exe)
 * Download zip file containing the STM32 files from [here](https://github.com/rogerclarkmelbourne/Arduino_STM32/archive/master.zip)
 * Unzip to create the Arduino_STM32 folder
-* Copy the Arduino_STM32 folder to My Documents/Arduino/hardware
+* Copy the Arduino_STM32 folder to My Documents/Arduino/hardware (note. if the hardware folder doesn't exist you will need to create it)
+* If using Maple or Maple mini under windows see below
 * Start the Arduino IDE, and select the appropriate board from the Tools -> Board menu, and select the appropriate Com port.
 
 ##### Maple and Maple mini windows drivers
 
-Please see his page on how to install the [Maple drivers](https://github.com/rogerclarkmelbourne/Arduino_STM32/wiki/Maple-drivers)
-
-Windows users can also watch [this video I did on Youtube](https://www.youtube.com/watch?v=-zwGnytGT8M), it refers to version 1.5.8 of the IDE, which was the current version when I did the video, however its equally applicable to 1.6.rc1 except the download location for the IDE is different. 
+If using Maple or Maple mini, you will need to install the drivers in drivers/win folder. Maple and Maple mini use drivers which come as standard on Windows 7 or newer, however USB VID/PID numbers of the Maple boards need to be associated with the relevant drivers, and Windows 7 and newer also require that the drivers and inf files need to be "signed". This is a complex process, but has been made seamless thanks to the work of @timschuerewegen who created a modified version of dwi-simple (To Do . link to DWI)
+Run the install_drivers.bat file, which runs dwi-simple.exe twice, once to install the usb serial device and once to install the DFU device. 
 
 ####Linux
 Download and install from either
