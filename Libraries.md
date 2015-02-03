@@ -14,6 +14,8 @@ Currently the libraries that come with the IDE work, (with some caveats), Howeve
 
 #####Tested and working
 * I2CDev
+* NRF24L01 reported to be working by @swe-dude on the Arduino forum
+* I2C_LiquidCrystal - library modified by @swe-dude has been added to the libraries folder.
 
 #####Not working
 
