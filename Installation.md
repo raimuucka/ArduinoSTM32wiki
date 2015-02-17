@@ -17,7 +17,9 @@ Linux 64: http://downloads.arduino.cc/arduino-1.6.0rc1-linux64.tgz
 
 in the ./Arduino_STM32/STMF1XX/tools/linux folder set the rights of maple_upload to 755 
 
-Install DFU-Utils 
+Install DFU-Utils.
+
+On Ubuntu it has been reported that the standard version of the utils V 0.5 does not work, but V 0.8 does work.
 
 Note. Please read the uploading section related to uploading when using Linux.
 
