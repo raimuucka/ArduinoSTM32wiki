@@ -20,6 +20,7 @@ in the ./Arduino_STM32/tools/linux folder set the rights of maple_upload to 755
 Install DFU-Utils.
 
 On Ubuntu it has been reported that the standard version of the utils V 0.5 does not work, but V 0.8 does work.
+See the linux page about how to build and install dfu-util
 
 Note. Please read the uploading section related to uploading when using Linux.
 
