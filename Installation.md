@@ -10,10 +10,10 @@
 ####Linux
 Download and install from either
 
-Linux 32:  http://downloads.arduino.cc/arduino-1.6.1-linux32.tgz
+Linux 32:  http://arduino.cc/download.php?f=/arduino-1.6.1-linux32.tar.xz
 
 or 
-Linux 64: http://downloads.arduino.cc/arduino-1.6.1-linux64.tgz 
+Linux 64: http://arduino.cc/download.php?f=/arduino-1.6.1-linux34.tar.xz
 
 in the ./Arduino_STM32/tools/linux folder set the rights of maple_upload to 755 
 
@@ -26,7 +26,7 @@ Note. Please read the uploading section related to uploading when using Linux.
 
 ####Mac OSX
 
-Download from  http://downloads.arduino.cc/arduino-1.6.1-macosx.zip 
+Download from  http://arduino.cc/download.php?f=/arduino-1.6.1-macosx.zip 
 
 Install DFU Utils. The easiest way to do this is to use Homebrew  http://brew.sh/ - see the bottom of the Homebrew page.
 
