@@ -1,6 +1,6 @@
 ####Windows 
 
-* Download and install the latest stable version of the Arduino Beta from [here](http://downloads.arduino.cc/arduino-1.6.0rc1-windows.exe)
+* Download and install the latest stable version of the Arduino Beta from [here](http://arduino.cc/download.php?f=/arduino-1.6.1-windows.exe)
 * Download zip file containing the STM32 files from [here](https://github.com/rogerclarkmelbourne/Arduino_STM32/archive/master.zip)
 * Unzip to create the Arduino_STM32 folder
 * Copy the Arduino_STM32 folder to My Documents/Arduino/hardware (note. if the hardware folder doesn't exist you will need to create it)
@@ -10,10 +10,10 @@
 ####Linux
 Download and install from either
 
-Linux 32:  http://downloads.arduino.cc/arduino-1.6.0rc1-linux32.tgz
+Linux 32:  http://downloads.arduino.cc/arduino-1.6.1-linux32.tgz
 
 or 
-Linux 64: http://downloads.arduino.cc/arduino-1.6.0rc1-linux64.tgz 
+Linux 64: http://downloads.arduino.cc/arduino-1.6.1-linux64.tgz 
 
 in the ./Arduino_STM32/tools/linux folder set the rights of maple_upload to 755 
 
@@ -26,7 +26,7 @@ Note. Please read the uploading section related to uploading when using Linux.
 
 ####Mac OSX
 
-Download from  http://downloads.arduino.cc/arduino-1.6.0rc1-macosx.zip 
+Download from  http://downloads.arduino.cc/arduino-1.6.1-macosx.zip 
 
 Install DFU Utils. The easiest way to do this is to use Homebrew  http://brew.sh/ - see the bottom of the Homebrew page.
 
