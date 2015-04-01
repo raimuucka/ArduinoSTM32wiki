@@ -25,6 +25,8 @@ See the linux page about how to build and install dfu-util
 Note. Please read the uploading section related to uploading when using Linux.
 
 ####Mac OSX
+Arduino_STM32 folder must be place inside ~/Documents/Arduino/hardware (note. if the hardware folder doesn't exist you will need to create it)
+So you should get ~/Documents/Arduino/hardware/Arduino_STM32
 
 Download from  http://arduino.cc/download.php?f=/arduino-1.6.1-macosx.zip 
 
@@ -42,4 +44,3 @@ Note. The if you install DFU Utils using another method than Homebrew the instal
 [https://groups.google.com/a/arduino.cc/forum/#!topic/developers/2_GD40Sl6FA](https://groups.google.com/a/arduino.cc/forum/#!topic/developers/2_GD40Sl6FA)
 
 Then follow the windows instructions
-
