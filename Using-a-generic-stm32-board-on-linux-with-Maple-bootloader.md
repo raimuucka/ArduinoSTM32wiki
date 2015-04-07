@@ -44,9 +44,13 @@ sudo /etc/init.d/udev restart
 
 (or whatever is appropriate for your Linux version)
 
-Next you need to ensure that upload_router is functional. At the time of writing, there was no linux version of upload router in the git repo, so if this is the case, save the following to tools/linux/upload_router and symlink this to tools/win/upload_router (to ensure that the IDE calls the linux version).
+Next you need to ensure that upload_router is functional. At the time this wiki page was first written, there was no linux version of upload router in the git repo.
 
 There should be a more up to date version of the upload_router included with the latest code, but the version below will let you see how this works. 
+
+The upload_router script relies on lsusb, dfu-util so if those dependencies are not installed on your system, install them first. 
+
+You also need to compile the usb-reset 'c' program ('c' code is below the bash script on this wiki page). 
 
 ```
 #!/bin/bash
