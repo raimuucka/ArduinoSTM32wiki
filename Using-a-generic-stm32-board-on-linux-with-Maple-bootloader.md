@@ -253,14 +253,14 @@ Other than that minor flaw, it works.
 
 This looks to be some sort of timeout in the maple bootloader, so allow 15 seconds once the board has rebooted for the serial port to come back up. 
 
-I took another quick look at trying to reset the STM32 USB device from software, but the problem is that I need to cut the USB power and there seems to be no reliable programatic method to do this. Although a lot of USB chipsets include this feature, most hardware vendors don't include the necessary circuitry to actually implement it. 
+I took a look at trying to reset the STM32 USB device from software, but the problem is that I need to cut the USB power and there seems to be no reliable programatic method to do this. Although a lot of USB chipsets include this feature, most hardware vendors don't include the necessary circuitry to actually implement it. 
 
-I think we are stuck with physical reset. i.e. Physically cut the USB power and reconnect , for non Maple boards.
+I think we are stuck with physical reset. i.e. Physically cut the USB power and reconnect, for non Maple boards.
 
 I tried toggling DTR and echoing "1eaf" to the device, but it just ignored me. Even pressing the reset button on the STM32 board doesn't make a difference, only powering the board off and back on lets Linux know it has changed state. 
 
 Perhaps I might take another look if I get the time, but to be honest it would be quicker to wire up a make/break switch on the +5V line in a USB extension lead to do the same thing if damaging your USB ports is a concern. 
 
-Just [url=http://www.ebay.com/itm/USB-Power-Cable-with-ON-OFF-Switch-Power-Control-for-Raspbeery-Pi-Arduino-Phone-/261837515315?pt=LH_DefaultDomain_0&hash=item3cf6bb6a33]make something like one of these[/url] and (assuming you have used 4 core wire), wire the data lines through... or build you own solution from whatever you have to hand. 
+Just make something like one of these >> [url=http://www.ebay.com/itm/USB-Power-Cable-with-ON-OFF-Switch-Power-Control-for-Raspbeery-Pi-Arduino-Phone-/261837515315?pt=LH_DefaultDomain_0&hash=item3cf6bb6a33  <<and (assuming you have used 4 core wire), wire the data lines through... or build you own solution from whatever you have to hand. 
 
-Alternatively, [url=http://www.ebay.com/itm/4-Ports-USB-2-0-Hub-High-Speed-Up-to-480Mbps-With-Power-On-Off-Button-Switch-Led-/201259337620?pt=LH_DefaultDomain_0&hash=item2edbfdc794]one of these[/url] or if you have lots of devices to program, [url=http://www.ebay.com/itm/New-Hot-7-Port-USB-2-0-Hub-High-Speed-ON-OFF-Sharing-Switch-For-PC-Laptop-/330989851927?pt=LH_DefaultDomain_2&var=&hash=item4d10885517]one of these, but you would need to externally power it[/url], will do the trick.
+Alternatively, >> http://www.ebay.com/itm/4-Ports-USB-2-0-Hub-High-Speed-Up-to-480Mbps-With-Power-On-Off-Button-Switch-Led-/201259337620?pt=LH_DefaultDomain_0&hash=item2edbfdc794 <<one of these, or if you have lots of devices to program, >> http://www.ebay.com/itm/New-Hot-7-Port-USB-2-0-Hub-High-Speed-ON-OFF-Sharing-Switch-For-PC-Laptop-/330989851927?pt=LH_DefaultDomain_2&var=&hash=item4d10885517 <<one of these, will do the trick but you would need to externally power it.
