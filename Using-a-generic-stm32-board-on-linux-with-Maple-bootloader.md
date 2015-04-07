@@ -46,9 +46,7 @@ Next you need to ensure that upload_router is functional. At the time this wiki 
 
 There should be a more up to date version of the upload_router included with the latest code, but the version below will let you see how this works. 
 
-The upload_router script relies on lsusb, dfu-util so if those dependencies are not installed on your system, install them first. 
-
-You also need to compile the usb-reset 'c' program ('c' code is below the bash script on this wiki page). 
+The upload_router script relies on lsusb, dfu-util so if those dependencies are not installed on your system, install them first.  
 
 ```
 #!/bin/bash
@@ -165,7 +163,8 @@ echo -e "\n\rSTM32 Maple board serial port re-created..."
 echo -e "\n\rSerial port is $THIS_TTY Please allow 15 seconds before attempting to read from serial port."
 
 ```
-Next we need a method to reset the device once we have programmed it. 
+Next we need a method to reset the device node in linux once we have programmed the board, in order to correctly enumerate the maple serial device as a tty, otherwise linux still thinks it has a dfu device attached.  
+
 We use the code from here http://askubuntu.com/questions/645/how-do-you-reset-a-usb-device-from-the-command-line. 
 
 Copy the 'c' code below and save as usb-reset.c
