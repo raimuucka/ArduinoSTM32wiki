@@ -1,4 +1,4 @@
-Details from @hull on the Arduino forum on how its possible to install and use the Maple bootloader on a generic STM32 board (one that doesn't have the Maple USB reset hardware) on Linux
+Details from @ahull on the Arduino forum on how its possible to install and use the Maple bootloader on a generic STM32 board (one that doesn't have the Maple USB reset hardware) on Linux
 
 (Apologies for the text formatting in this page. but I wanted to get it into the wiki before it got lost)
 
@@ -60,7 +60,6 @@ Next you need to ensure that upload_router is functional. At the time of writing
 
 
 ```
-
 #!/bin/bash
 # Translates the windows Arduino IDE upload call - something like..
 #
@@ -128,10 +127,8 @@ do
     sleep 1
 done
 
-
-
-Next we need a method to reset the device once we have programmed it. We use the code from here http://askubuntu.com/questions/645/how-do-you-reset-a-usb-device-from-the-command-line. Copy the code below and save as usb-reset.c
 ```
+Next we need a method to reset the device once we have programmed it. We use the code from here http://askubuntu.com/questions/645/how-do-you-reset-a-usb-device-from-the-command-line. Copy the code below and save as usb-reset.c
 
 ```
 
