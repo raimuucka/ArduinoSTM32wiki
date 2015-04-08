@@ -15,9 +15,9 @@ Currently the libraries that come with the IDE work, (with some caveats), Howeve
 * LiquidCrystal_I2C - modified version of this library was supplied by @swe-dude has been added to the libraries folder.
 * OneWire - Updated by me (Roger Clark). Currently this uses direct hardware access via a small change to the way the pin macros work. However I have also submitted a pull request to Paul (PJCR) who manages the master repo for this library, to add a form of "fallback" support for architectures not specifically catered for in the code - but using normal API calls for digitalRead,digitalWrite and pinMode (rather than direct hardware access) as the 72MHz STM32F1 is plenty fast enought that direct hardware access is not required for the bus timings to work.
 * Servo  (Tested and reported to be working by @ahull on the Arduino forum)
-* Adafruit_ILI9341 - Working and test by several people on different displays using hardware SPI1.
-* Adafruit_ILI9341_STM - Working, further modified to use DMA transfers, improving speed.
-* ILI9341_due_STM - Based on DUE/Teensy ILI9341 library. Uses and several other optimizations. Also supports multiple font types. Uses more flash and RAM than the standard ILI9341, but performs much better. Recommended for high refresh rates.
+* Adafruit_ILI9341 - Working and test by several people on different displays using hardware spi port 1.
+* Adafruit_ILI9341_STM - Working, further modified to use DMA transfers, improving speed. Uses spi port 1
+* ILI9341_due_STM - Based on DUE/Teensy ILI9341 library. Uses and several other optimizations. Also supports multiple font types. Uses more flash and RAM than the standard ILI9341, but performs much better. Recommended for high refresh rates. Uses spi port 1.
 * Adafruit_GFX_AS - Based on Adafruit GFX_AS library, it adds support for more fonts. Working and tested in Maple mini and ILI9341 display.
 
 #####Not working
