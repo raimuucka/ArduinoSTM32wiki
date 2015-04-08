@@ -17,7 +17,7 @@ Currently the libraries that come with the IDE work, (with some caveats), Howeve
 * Servo  (Tested and reported to be working by @ahull on the Arduino forum)
 * Adafruit_ILI9341 - Working and test by several people on different displays using hardware spi port 1.
 * Adafruit_ILI9341_STM - Working, further modified to use DMA transfers, improving speed. Uses spi port 1
-* ILI9341_due_STM - Based on DUE/Teensy ILI9341 library. Uses and several other optimizations. Also supports multiple font types. Uses more flash and RAM than the standard ILI9341, but performs much better. Recommended for high refresh rates. Uses spi port 1.
+* ILI9341_due_STM - Based on DUE/Teensy ILI9341 library. Uses DMA and several other optimizations. Also supports multiple font types. Uses more flash and RAM than the standard ILI9341, but performs much better. Recommended for high refresh rates. Uses spi port 1. Should work on Arduino AVR, Due, Teensy, and Maple STM32 boards.
 * Adafruit_GFX_AS - Based on Adafruit GFX_AS library, it adds support for more fonts. Working and tested in Maple mini and ILI9341 display.
 
 #####Not working
