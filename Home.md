@@ -1,5 +1,7 @@
 #####Arduino STM32 adds the ability to develop for STM32F103 based boards, including the Maple and Maple mini using the Arduino 1.6.1 IDE
 
+######Update. IDE 1.6.2 or newer support has now been added see the page about the IDE Boards manager
+
 There is also experimental support for STM32F3 and STM32F4, however code for both of these devices is in early stages of development / porting, and only the STM32F1 is close to full support for the Arduino 1.0 API (and mostly compliant with the Arduino 1.6.x API)
 
 [Installation](https://github.com/rogerclarkmelbourne/Arduino_STM32/wiki/Installation)
