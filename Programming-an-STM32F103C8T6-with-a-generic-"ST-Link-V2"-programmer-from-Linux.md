@@ -8,14 +8,20 @@ This method is a work in progress, so expect these instruction to be incomplete,
 
 First take the new ST-Link clone and plug it in to one of your USB ports. [These little boards](http://www.ebay.com/itm/ST-Link-V2-Shell-STM8-STM32-Emulator-Download-Programmer-Debugger-Random-Color-/371295635365?pt=LH_DefaultDomain_2&hash=item5672f1c7a5) are very cheap, possibly even cheaper than a usb serial adapter. 
 
-Look in DMESG and you should see something like this...
+Look in **dmesg** and you should see something like this...
 
 **[ 3377.046983] usb 1-1.5.3.3: USB disconnect, device number 11**
+
 **[ 3439.715490] usb 1-1.5.3.3: new full-speed USB device number 12 using ehci-pci**
+
 **[ 3439.826110] usb 1-1.5.3.3: New USB device found, idVendor=0483, idProduct=3748**
+
 **[ 3439.826120] usb 1-1.5.3.3: New USB device strings: Mfr=1, Product=2, SerialNumber=3**
+
 **[ 3439.826125] usb 1-1.5.3.3: Product: STM32 STLink**
+
 **[ 3439.826129] usb 1-1.5.3.3: Manufacturer: STMicroelectronics**
+
 **[ 3439.826133] usb 1-1.5.3.3: SerialNumber: R\xffffffc3\xffffffbf\xffffffbfo\x06Q\xffffffc2\xffffff88\xffffff88QTQ)"g**
 
 Next, wire the board up to the target. The pins used may be less than obvious, I went for the minimum, and used my Yellow Headers STM32 board, which looks like this...
