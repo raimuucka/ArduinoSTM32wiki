@@ -1,4 +1,4 @@
-The following was done on an Ubuntu Linux (14.10) box, so your mileage may vary if you are using some other platform.
+The following was tested on an Ubuntu Linux (14.10) box, so your mileage may vary if you are using some other platform.
 
 This is an alternative method for programming the STM32F103XXX series devices. 
 
@@ -18,25 +18,23 @@ Look in DMESG and you should see something like this...
 **[ 3439.826129] usb 1-1.5.3.3: Manufacturer: STMicroelectronics**
 **[ 3439.826133] usb 1-1.5.3.3: SerialNumber: R\xffffffc3\xffffffbf\xffffffbfo\x06Q\xffffffc2\xffffff88\xffffff88QTQ)"g**
 
-Next, wire the board up to the target. The pins used may be less than obvious, I went for the minimum, and used my "Yellow Headers" STM32F103C8T6 board, similar to this...
+Next, wire the board up to the target. The pins used may be less than obvious, I went for the minimum, and used my [http://www.aliexpress.com/item/mini-Stm32f103c8t6-system-board-stm32-learning-development-board/1568685935.html](Yellow Headers STM32 board ), similar to this...
 ![Generic STM32F103C8T6](https://lh3.googleusercontent.com/-ohiI0rIgvgY/VODXkdmweZI/AAAAAAAAB8k/B3Ncrwwzgyk/w777-h583-no/RIMG0602.JPG)
-http://www.aliexpress.com/item/mini-Stm32f103c8t6-system-board-stm32-learning-development-board/1568685935.html
 
 .. I used this mainly because it didn't have an STM JTAG header on it, and I like to make life difficult for myself (well that and the fact that the other boards I have are at home).  
 
 I wired it as per the pictures here...
 
 ![STLink V2 programmer](https://lh4.googleusercontent.com/-C7DNBrlaMTM/VS-2Fj8yVoI/AAAAAAAACCk/Opx0x4sQe5I/w1193-h895-no/IMG_0169.JPG)
-Yes, the programmer really is that tiny.
+_# Yes, the programmer really is that tiny._
 
 ... and here ...
 
 ![STLink V2 Board wiring](https://lh4.googleusercontent.com/-NdBz7TJesHk/VS-0rFF-73I/AAAAAAAACCQ/yQzSBV6m3_M/w1193-h895-no/IMG_0170.JPG)
 
-
 .. and a few more [here](https://plus.google.com/u/0/photos/+AndrewHull-penguin-droppings/albums/6115348934192197553/6138323441149647122?pid=6138323441149647122&oid=111082960064282217370)...
 
-WARNING: I am powering the STM from the programmer, if you intend to plug in the USB port at the same time, then remove the power (orange) wire, otherwise you may see some magic smoke.:smiley-cry:
+WARNING: I am powering the STM from the programmer, if you intend to plug in the USB port at the same time, then remove the power (orange) wire, otherwise you may see some magic smoke.
 
 I had previously installed openocd from the Ubuntu repos, but I like to live dangerously and decided to use the latest version from the GIT repo.
 
