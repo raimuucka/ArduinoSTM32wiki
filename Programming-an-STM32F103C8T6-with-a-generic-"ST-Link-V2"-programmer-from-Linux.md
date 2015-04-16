@@ -40,10 +40,15 @@ I had previously installed openocd from the Ubuntu repos, but I like to live dan
 
 The following recipe did the trick for me....
 
+Remove any old version of openocd
+
 **sudo apt-get remove openocd**
 
-**unset CXX # optional, but perhaps necessary if you have been using cross compilers from the command line**
-          **# I have been compiling for the Raspbery Pi on my machine, and unless I do this I get the wrong compiler.**
+**unset CXX** 
+
+NOTE: This unset command is optional, but perhaps necessary if you have been using cross compilers from the command line. I have been compiling for the Raspbery Pi on my machine, and unless I do this I get the wrong compiler.
+
+Next create a folder to put the openocd git repo in
 
 **mkdir -p ~/sandbox**
 
@@ -65,7 +70,9 @@ The following recipe did the trick for me....
 
 **sudo make install**
 
-Next we need to run openoc, but since I have no clue how this works, I'm going to run it in a bash loop using the default config files that ship with openocd....
+Check that openocd runs and if so, we can move on...
+
+Next we need to run openoc, but since I had no clue how this works, I opted to run it in a bash loop using the default config files that ship with openocd....
 
 **while true; do openocd -f ./tcl/interface/stlink-v2.cfg -f ./tcl/target/stm32f1x.cfg; sleep 1;done**
 
@@ -87,16 +94,14 @@ In the telnet session issue a reset halt command.
 **in procedure 'reset'**
 **in procedure 'ocd_bouncer'**
 
-
 ... release the reset button.. target should halt after reset...
-
 
 **target state: halted**
 **target halted due to debug-request, current mode: Thread**
 **xPSR: 0x01000000 pc: 0x0800016c msp: 0x20005000**
 **> **
 
-Bingo... we have control..  :D
+Bingo... we have control.. 
 
 .. so what's the first thing we need to do... dump the existing firmware...
 
@@ -104,4 +109,4 @@ Bingo... we have control..  :D
 **dumped 131071 bytes in 2.825877s (45.295 KiB/s)**
 **> **
 
-We have *complete* control. 
+We have *complete* control, so compile a sketch in the Arduino IDE, copy and upload the resulting .bin file. 
