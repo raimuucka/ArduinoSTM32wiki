@@ -46,14 +46,23 @@ The following recipe did the trick for me....
           **# I have been compiling for the Raspbery Pi on my machine, and unless I do this I get the wrong compiler.**
 
 **mkdir -p ~/sandbox**
+
 **cd ~/sandbox**
+
 **mkdir openocd**
+
 **git clone git://repo.or.cz/openocd.git**
+
 **cd openocd**
+
 **sudo apt-get install make libtool pkg-config autoconf automake texinfo**
+
 **./bootstrap**
+
 **./configure**
+
 **make**
+
 **sudo make install**
 
 Next we need to run openoc, but since I have no clue how this works, I'm going to run it in a bash loop using the default config files that ship with openocd....
