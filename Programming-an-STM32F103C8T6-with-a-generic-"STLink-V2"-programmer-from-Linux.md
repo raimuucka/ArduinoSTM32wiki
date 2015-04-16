@@ -6,7 +6,7 @@ You will probably find in most cases it easier to use a USB to serial converter 
 
 This method is a work in progress, so expect these instruction to be incomplete, I am jotting them down before I forget what I did. 
 
-First take the new ST-Link clone and plug it in to one of your USB ports.
+First take the new ST-Link clone and plug it in to one of your USB ports. [These little boards](http://www.ebay.com/itm/ST-Link-V2-Shell-STM8-STM32-Emulator-Download-Programmer-Debugger-Random-Color-/371295635365?pt=LH_DefaultDomain_2&hash=item5672f1c7a5) are very cheap, possibly even cheaper than a usb serial adapter. 
 
 Look in DMESG and you should see something like this...
 
