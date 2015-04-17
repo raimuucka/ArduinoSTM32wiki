@@ -29,7 +29,9 @@ Next, wire the board up to the target. The pins used may be less than obvious, I
 
 .. I used this partly because it didn't have an STM JTAG header on it, and I like to make life difficult for myself, but mainly because the other boards were at home. 
 
-I wired it as per the pictures here, having figured out that the pins I needed for jtag were *probably* on the right angled header... Programmer end wired like this...
+I wired it as per the pictures here, having figured out that the pins I needed for jtag were *probably* on the right angled header... 
+
+The Programmer end was wired like this...
 
 ![STLink V2 programmer](https://lh4.googleusercontent.com/-C7DNBrlaMTM/VS-2Fj8yVoI/AAAAAAAACCk/Opx0x4sQe5I/w1193-h895-no/IMG_0169.JPG)
 _# Yes, the programmer really is that tiny._
