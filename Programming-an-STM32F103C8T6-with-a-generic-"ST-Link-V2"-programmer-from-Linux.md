@@ -100,7 +100,7 @@ Check that openocd runs and if so, we can move on...
 
 Next we need to run openoc, but since I had no clue how this works, I opted to run it in a bash loop using the default config files that ship with openocd....
 
-** while true; do openocd  -f /usr/local/share/openocd/scripts/interface/stlink-v2.cfg -f /usr/local/share/openocd/scripts/target/stm32f1x.cfg ; sleep 1;done **
+**while true; do openocd  -f /usr/local/share/openocd/scripts/interface/stlink-v2.cfg -f /usr/local/share/openocd/scripts/target/stm32f1x.cfg ; sleep 1;done**
 
 .. I'll come back to this once I have figured out how to do this correctly.
 
