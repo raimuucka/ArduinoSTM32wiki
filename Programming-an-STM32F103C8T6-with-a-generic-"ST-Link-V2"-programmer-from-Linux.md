@@ -125,6 +125,7 @@ Bingo... we have control..
 .. so what's the first thing we need to do... dump the existing firmware...
 
 **dump_image dump.bin 0x08000000 0x1ffff**
+
 **dumped 131071 bytes in 2.825877s (45.295 KiB/s)**
 **> **
 
@@ -140,12 +141,17 @@ Then upload it to the device...
 **target state: halted**
 **target halted due to debug-request, current mode: Thread **
 **xPSR: 0x01000000 pc: 0x0800016c msp: 0x20005000**
+
 **> flash write_image erase ~/Downloads/maple_mini_boot.bin  0x08000000**
+
 **auto erase enabled**
+
 **target state: halted**
 **target halted due to breakpoint, current mode: Thread **
 **xPSR: 0x61000000 pc: 0x2000003a msp: 0x20005000**
+
 **wrote 16384 bytes from file ~/Downloads/maple_mini_boot.bin in 0.949075s (16.859 KiB/s)**
+
 **> reset run**
  
 Now if you unplug and replug the device in to a USB port and look in dmesg...
