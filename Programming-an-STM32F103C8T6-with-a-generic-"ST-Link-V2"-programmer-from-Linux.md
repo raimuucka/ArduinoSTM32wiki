@@ -118,13 +118,14 @@ In the telnet session issue a reset halt command.
 **target state: halted**
 **target halted due to debug-request, current mode: Thread**
 **xPSR: 0x01000000 pc: 0x0800016c msp: 0x20005000**
+
 **> **
 
 Bingo... we have control.. 
 
-.. so what's the first thing we need to do... dump the existing firmware...
+.. so what's the first thing we need to do... dump the existing firmware of course...
 
-**dump_image dump.bin 0x08000000 0x1ffff**
+_**dump_image dump.bin 0x08000000 0x1ffff**_
 
 **dumped 131071 bytes in 2.825877s (45.295 KiB/s)**
 **> **
@@ -142,7 +143,7 @@ Then upload it to the device...
 **target halted due to debug-request, current mode: Thread **
 **xPSR: 0x01000000 pc: 0x0800016c msp: 0x20005000**
 
-**> flash write_image erase ~/Downloads/maple_mini_boot.bin  0x08000000**
+_**> flash write_image erase ~/Downloads/maple_mini_boot.bin  0x08000000**_
 
 **auto erase enabled**
 
@@ -152,7 +153,7 @@ Then upload it to the device...
 
 **wrote 16384 bytes from file ~/Downloads/maple_mini_boot.bin in 0.949075s (16.859 KiB/s)**
 
-**> reset run**
+_**> reset run**_
  
 Now if you unplug and replug the device in to a USB port and look in dmesg...
 
