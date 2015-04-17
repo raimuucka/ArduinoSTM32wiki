@@ -115,4 +115,34 @@ Bingo... we have control..
 **dumped 131071 bytes in 2.825877s (45.295 KiB/s)**
 **> **
 
-We have *complete* control, so compile a sketch in the Arduino IDE, copy and upload the resulting .bin file. 
+We have *complete* control, so we can now program the device... so why not flash the maple bootloader on it?
+
+Grab the bootloader for the Maple Mini from here... 
+
+http://static.leaflabs.com/pub/leaflabs/maple-bootloader/maple_boot.bin
+
+Then upload it to the device...
+
+**> reset halt**
+**target state: halted**
+**target halted due to debug-request, current mode: Thread **
+**xPSR: 0x01000000 pc: 0x0800016c msp: 0x20005000**
+**> flash write_image erase ~/Downloads/maple_mini_boot.bin  0x08000000**
+**auto erase enabled**
+**target state: halted**
+**target halted due to breakpoint, current mode: Thread **
+**xPSR: 0x61000000 pc: 0x2000003a msp: 0x20005000**
+**wrote 16384 bytes from file ~/Downloads/maple_mini_boot.bin in 0.949075s (16.859 KiB/s)**
+**> reset run**
+ 
+Now if you unplug and replug the device in to a USB port and look in dmesg...
+
+**[95669.294185] usb 1-1.2: new full-speed USB device number 34 using ehci-pci**
+**[95669.387630] usb 1-1.2: New USB device found, idVendor=1eaf, idProduct=0003**
+**[95669.387634] usb 1-1.2: New USB device strings: Mfr=1, Product=2, SerialNumber=3**
+**[95669.387636] usb 1-1.2: Product: Maple 003**
+**[95669.387637] usb 1-1.2: Manufacturer: LeafLabs**
+**[95669.387638] usb 1-1.2: SerialNumber: LLM 003**
+ 
+... you should see the Maple Leaflabs device enumarated. 
+
