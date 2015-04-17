@@ -8,6 +8,9 @@ This method is a work in progress, so expect these instruction to be incomplete,
 
 First take the new ST-Link clone and plug it in to one of your USB ports. [These little boards](http://www.ebay.com/itm/ST-Link-V2-Shell-STM8-STM32-Emulator-Download-Programmer-Debugger-Random-Color-/371295635365?pt=LH_DefaultDomain_2&hash=item5672f1c7a5) are very cheap, possibly even cheaper than a usb serial adapter. 
 
+![The STLink V2 programmer with its covers removed.](https://lh6.googleusercontent.com/-9PyZ0CJAEQ8/VS-0qTdKiSI/AAAAAAAACCA/0JycppEupY8/w953-h715-no/IMG_0168.JPG)
+
+
 Look in **dmesg** and you should see something like this...
 
 **[ 3377.046983] usb 1-1.5.3.3: USB disconnect, device number 11**
@@ -34,7 +37,7 @@ I wired it as per the pictures here, having figured out that the pins I needed f
 The Programmer end was wired like this...
 
 ![STLink V2 programmer](https://lh4.googleusercontent.com/-C7DNBrlaMTM/VS-2Fj8yVoI/AAAAAAAACCk/Opx0x4sQe5I/w1193-h895-no/IMG_0169.JPG)
-_# Yes, the programmer really is that tiny._
+_Yes, the programmer really is that tiny. Amazing to think that little blue can contains a complete STM32F103C8T6 board _
 
 ... and here is the target board end...
 
