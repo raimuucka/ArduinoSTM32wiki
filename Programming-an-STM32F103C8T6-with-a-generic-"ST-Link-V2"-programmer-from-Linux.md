@@ -1,5 +1,5 @@
-The following was tested on an Ubuntu Linux (14.10) box, so your mileage may vary if you are using some other platform.
-
+The following was tested on an Ubuntu Linux (14.10) box, so your mileage may vary if you are using some other platform. The OpenOCD version used here was "Open On-Chip Debugger 0.9.0-dev-00401-gf3b1405 (2015-04-16-12:04)" which is fairly bleeding edge. Earlier versions may work, however I would suggest going for something recent.
+ 
 This is an alternative method for programming the STM32F103XXX series devices. 
 
 You will probably find in most cases it easier to use a USB to serial converter or install the maple boot loader and use dfu-util 
