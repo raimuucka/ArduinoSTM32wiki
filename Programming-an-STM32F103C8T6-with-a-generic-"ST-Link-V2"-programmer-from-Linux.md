@@ -44,10 +44,12 @@ WARNING: I am powering the STM from the programmer, if you intend to plug in the
 
 The logic behind the wiring may be unclear, so I'll explain.
  
-We need 3 wires for basic ST-Link functionality, the colours of the wires are not important obviously.  
+We need 3 wires for basic ST-Link functionality, the actual colours of the wires are not important obviously, I went for...   
 
 Ground (Green) -> GND
+
 SWDIO (Blue)   -> PA13
+
 SWCLK (Yellow) -> PA14 
 
 The exact location of these pins on your test board will perhaps be less than obvious, particularly since the pins on the STM32 are multifunctional, so refer to the [STM datasheet](http://www.st.com/web/en/resource/technical/document/datasheet/CD00161566.pdf) around page 32 and the schematic for your board for more information. 
