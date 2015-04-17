@@ -1,8 +1,8 @@
 The following was tested on an Ubuntu Linux (14.10) box, so your mileage may vary if you are using some other platform. The OpenOCD version used here was "Open On-Chip Debugger 0.9.0-dev-00401-gf3b1405 (2015-04-16-12:04)" which is fairly bleeding edge. Earlier versions may work, however I would suggest going for something recent.
  
-This is an alternative method for programming the STM32F103XXX series devices. 
+This is an alternative method for programming the STM32F103XXX series devices. ST-Link also allows On Chip debugging and direct access to the resources of the processor, so it is a very powerful debug tool. I will only cover programming the STM32F103XXX here - refer to the OpenOCD documentation at http://openocd.org/ for more in depth insight into the scope of OpenOCD debugging. OpenOCD can also be used with the Eclipse IDE, and perhaps other IDEs. 
 
-You will probably find in most cases it easier to use a USB to serial converter or install the maple boot loader and use dfu-util 
+You will probably find in most cases it easier to use a USB to serial converter or install the maple boot loader and use dfu-util if you simply want to write a sketch to the board. 
 
 This method is a work in progress, so expect these instruction to be incomplete, I am jotting them down before I forget what I did. 
 
@@ -42,7 +42,20 @@ _# Yes, the programmer really is that tiny._
 
 WARNING: I am powering the STM from the programmer, if you intend to plug in the USB port at the same time, then remove the power (orange) wire first, otherwise you may see some magic smoke.
 
-I had previously installed openocd from the Ubuntu repos, but I like to live dangerously and decided to use the latest version from the GIT repo.
+The logic behind the wiring may be unclear, so I'll explain.
+ 
+We need 3 wires for basic ST-Link functionality, the colours of the wires are not important obviously.  
+
+Ground (Green) -> GND
+SWDIO (Blue)   -> PA13
+SWCLK (Yellow) -> PA14 
+
+The exact location of these pins on your test board will perhaps be less than obvious, particularly since the pins on the STM32 are multifunctional, so refer to the [STM datasheet](http://www.st.com/web/en/resource/technical/document/datasheet/CD00161566.pdf) around page 32 and the schematic for your board for more information. 
+
+In addition if you want to power the board under test from the ST-Link programmer, connect either +5v or +3v3, this is the Orange wire in the pictures. 
+You don't need this wire if you are powering the board you are programming from USB or some other source.  
+
+I had previously installed openocd from the Ubuntu repos, but this was a relatively out of date version. I like to live dangerously and decided to use the latest version from the GIT repo.
 
 The following recipe did the trick for me....
 
