@@ -125,7 +125,7 @@ Bingo... we have control..
 
 .. so what's the first thing we need to do... dump the existing firmware of course...
 
-_**dump_image dump.bin 0x08000000 0x1ffff**_
+_**> dump_image dump.bin 0x08000000 0x1ffff**_
 
 **dumped 131071 bytes in 2.825877s (45.295 KiB/s)**
 **> **
@@ -136,14 +136,15 @@ Grab the bootloader for the Maple Mini from here...
 
 http://static.leaflabs.com/pub/leaflabs/maple-bootloader/maple_boot.bin
 
-Then upload it to the device...
+Then upload it to the device... halt it first... 
 
-**> reset halt**
+_**> reset halt**_
+
 **target state: halted**
 **target halted due to debug-request, current mode: Thread **
 **xPSR: 0x01000000 pc: 0x0800016c msp: 0x20005000**
 
-_**> flash write_image erase ~/Downloads/maple_mini_boot.bin  0x08000000**_
+_**> flash write_image erase maple_mini_boot.bin  0x08000000**_
 
 **auto erase enabled**
 
@@ -151,7 +152,9 @@ _**> flash write_image erase ~/Downloads/maple_mini_boot.bin  0x08000000**_
 **target halted due to breakpoint, current mode: Thread **
 **xPSR: 0x61000000 pc: 0x2000003a msp: 0x20005000**
 
-**wrote 16384 bytes from file ~/Downloads/maple_mini_boot.bin in 0.949075s (16.859 KiB/s)**
+**wrote 16384 bytes from file maple_mini_boot.bin in 0.949075s (16.859 KiB/s)**
+
+Success! So now restart the device...
 
 _**> reset run**_
  
@@ -164,5 +167,6 @@ Now if you unplug and replug the device in to a USB port and look in dmesg...
 **[95669.387637] usb 1-1.2: Manufacturer: LeafLabs**
 **[95669.387638] usb 1-1.2: SerialNumber: LLM 003**
  
-... you should see the Maple Leaflabs device enumarated. 
+... you should see the Maple Leaflabs device enumarated... its running our code! 
 
+If you made it this far, congratulations you now have total control over the STM device, you can reflash, reformat, reprogram, debug, or do whatever you want to it. 
