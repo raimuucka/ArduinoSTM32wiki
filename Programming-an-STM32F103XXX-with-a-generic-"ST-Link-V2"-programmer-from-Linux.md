@@ -53,7 +53,7 @@ _Yes, the programmer really is that tiny 20mmx56mm. Amazing to think that little
 
 .. and a few more related pictures can be found [here](https://plus.google.com/u/0/photos/+AndrewHull-penguin-droppings/albums/6115348934192197553/6138323441149647122?pid=6138323441149647122&oid=111082960064282217370)...
 
-WARNING: I am powering the STM from the programmer, if you intend to plug in the USB port at the same time, then remove the power (orange) wire first, otherwise you may see some magic smoke.
+## WARNING: When developing, and powering the STM target board from the programmer, if you intend to plug in the USB port at the same time, then remove the power (orange) wire first, and power the board from USB otherwise you may see some magic smoke. 
 
 The logic behind the wiring may be unclear, so I'll explain.
  
