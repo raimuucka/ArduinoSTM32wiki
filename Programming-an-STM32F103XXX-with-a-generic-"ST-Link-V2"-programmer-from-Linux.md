@@ -57,8 +57,10 @@ _Yes, the programmer really is that tiny 20mmx56mm. Amazing to think that little
 
 The logic behind the wiring may be unclear, so I'll explain.
  
-We need 3 wires for basic ST-Link functionality, the actual colours of the wires are not important obviously, I went for...   
+We need 3 wires for basic ST-Link functionality, the actual colours of the wires are not important.
+I went for...   
 
+Programmer  -> Target
 Ground (Green) -> GND
 
 SWDIO (Blue)   -> PA13
