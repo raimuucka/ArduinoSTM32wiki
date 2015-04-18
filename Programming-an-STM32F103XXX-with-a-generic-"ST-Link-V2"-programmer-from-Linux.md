@@ -47,7 +47,7 @@ _Yes, the programmer really is that tiny. Amazing to think that little blue can 
 
 ![STLink V2 Board wiring](https://lh4.googleusercontent.com/-NdBz7TJesHk/VS-0rFF-73I/AAAAAAAACCQ/yQzSBV6m3_M/w1193-h895-no/IMG_0170.JPG)
 
-... and here is a different board wiring for comparison. Note the dangling orange wire, as I am powering this board from USB
+... and here is another STM32F103C8T6 board wired to the JTAG header for comparison. Note the dangling orange wire, as I am powering this board from USB. Also worth mentioning are the three wires leaving the picture at the bottom right which are attached to a servo, and have nothing to do with the programmer. 
 
 ![Another Generic STM32F103C8T6 board.](https://lh5.googleusercontent.com/-UdtBIsoCJHY/VTIzMCQT3HI/AAAAAAAACDc/ieZOOHZUQI8/w536-h715-no/IMG_0177.JPG)
 
