@@ -122,7 +122,8 @@ Press and hold the reset button on the target....
 
 In the telnet session issue a reset halt command.
 
-**> reset halt **
+_**> reset halt**_
+
 **timed out while waiting for target halted**
 **TARGET: stm32f1x.cpu - Not halted**
 **in procedure 'reset'**
