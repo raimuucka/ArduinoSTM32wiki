@@ -4,7 +4,7 @@ I used a clone ["ST-Link V2"](http://www.ebay.com/sch/i.html?_from=R40&_trksid=p
 
 The [OpenOCD](http://openocd.org/) version used in my testing was "Open On-Chip Debugger 0.9.0-dev-00401-gf3b1405 (2015-04-16-12:04)" which is fairly bleeding edge. Earlier versions may work, however I would suggest going for something recent.
  
-This is an alternative method for programming the STM32F103XXX series devices. ST-Link also allows On Chip debugging and direct access to the resources of the processor, so it is a very powerful debug tool. I will only cover programming the STM32F103XXX here - refer to the OpenOCD documentation at http://openocd.org/ for more in depth insight into the scope of OpenOCD debugging. OpenOCD can also be used with the Eclipse IDE, and perhaps other IDEs. 
+This is an alternative method for programming the STM32F103XXX series devices, and any others that support ST-Link. ST-Link also allows On Chip debugging and direct access to the resources of the processor, so it is a very powerful debug tool. I will only cover programming the STM32F103XXX here - refer to the OpenOCD documentation at http://openocd.org/ for more in depth insight into the scope of OpenOCD debugging. OpenOCD can also be used with the Eclipse IDE, and perhaps other IDEs. 
 
 You will probably find in most cases it easier to use a USB to serial converter or install the maple boot loader and use dfu-util if you simply want to write a sketch to the board. 
 
