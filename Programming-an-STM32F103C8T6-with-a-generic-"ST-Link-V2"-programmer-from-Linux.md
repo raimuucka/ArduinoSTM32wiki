@@ -2,7 +2,7 @@ The following was tested on an Ubuntu Linux (14.10) box, so your mileage may var
 
 I used a clone ["ST-Link V2"](http://www.ebay.com/sch/i.html?_from=R40&_trksid=p2050601.m570.l1313.TR0.TRC0.H0.Xstlink+v2.TRS0&_nkw=stlink+v2&_sacat=0) device and OpenOCD, the genuine ST-Link adapters would presumably work just as well if not better. 
 
-The [http://openocd.org/](OpenOCD) version used in my testing was "Open On-Chip Debugger 0.9.0-dev-00401-gf3b1405 (2015-04-16-12:04)" which is fairly bleeding edge. Earlier versions may work, however I would suggest going for something recent.
+The [OpenOCD](http://openocd.org/) version used in my testing was "Open On-Chip Debugger 0.9.0-dev-00401-gf3b1405 (2015-04-16-12:04)" which is fairly bleeding edge. Earlier versions may work, however I would suggest going for something recent.
  
 This is an alternative method for programming the STM32F103XXX series devices. ST-Link also allows On Chip debugging and direct access to the resources of the processor, so it is a very powerful debug tool. I will only cover programming the STM32F103XXX here - refer to the OpenOCD documentation at http://openocd.org/ for more in depth insight into the scope of OpenOCD debugging. OpenOCD can also be used with the Eclipse IDE, and perhaps other IDEs. 
 
