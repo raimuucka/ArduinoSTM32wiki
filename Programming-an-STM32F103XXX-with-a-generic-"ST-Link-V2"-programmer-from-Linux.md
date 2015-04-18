@@ -136,8 +136,7 @@ _**> reset halt**_
 **target state: halted**
 **target halted due to debug-request, current mode: Thread**
 **xPSR: 0x01000000 pc: 0x0800016c msp: 0x20005000**
-
-_** > **_
+**...**
 
 Bingo... we have control.. 
 
