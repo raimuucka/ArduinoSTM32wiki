@@ -61,6 +61,7 @@ We need 3 wires for basic ST-Link functionality, the actual colours of the wires
 I went for...   
 
 Programmer  -> Target
+
 Ground (Green) -> GND
 
 SWDIO (Blue)   -> PA13
