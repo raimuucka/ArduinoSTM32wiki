@@ -41,7 +41,7 @@ I wired it as per the pictures here, having figured out that the pins I needed f
 The Programmer end was wired like this...
 
 ![STLink V2 programmer](https://lh4.googleusercontent.com/-C7DNBrlaMTM/VS-2Fj8yVoI/AAAAAAAACCk/Opx0x4sQe5I/w1193-h895-no/IMG_0169.JPG)
-_Yes, the programmer really is that tiny. Amazing to think that little blue can contains a complete STM32F103C8T6 board._
+_Yes, the programmer really is that tiny 20mmx56mm. Amazing to think that little blue can contains a complete STM32F103C8T6 board._
 
 ... and here is the target board end...
 
