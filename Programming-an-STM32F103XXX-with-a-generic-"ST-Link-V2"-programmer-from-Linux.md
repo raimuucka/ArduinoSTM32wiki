@@ -47,6 +47,10 @@ _Yes, the programmer really is that tiny. Amazing to think that little blue can 
 
 ![STLink V2 Board wiring](https://lh4.googleusercontent.com/-NdBz7TJesHk/VS-0rFF-73I/AAAAAAAACCQ/yQzSBV6m3_M/w1193-h895-no/IMG_0170.JPG)
 
+... and here is a different board wiring for comparison. Note the dangling orange wire, as I am powering this board from USB
+
+![Another Generic STM32F103C8T6 board.](https://lh5.googleusercontent.com/-UdtBIsoCJHY/VTIzMCQT3HI/AAAAAAAACDc/ieZOOHZUQI8/w536-h715-no/IMG_0177.JPG)
+
 .. and a few more related pictures can be found [here](https://plus.google.com/u/0/photos/+AndrewHull-penguin-droppings/albums/6115348934192197553/6138323441149647122?pid=6138323441149647122&oid=111082960064282217370)...
 
 WARNING: I am powering the STM from the programmer, if you intend to plug in the USB port at the same time, then remove the power (orange) wire first, otherwise you may see some magic smoke.
