@@ -1,4 +1,4 @@
-# A modified bootloader is being developed as an effort to increase the Flash and RAM available for sketches.
+### A modified bootloader is being developed as an effort to increase the Flash and RAM available for sketches.
 
 Currently the changes are still being tested, but the targets are:
 * Remove upload sketch to RAM in the Maple Mini. Even an empty sketch takes more space than the RAM available, so that option was not usable for a long time, and caused the bootloader to reserve 3KB of RAM, not available for any sketch even running from flash.
