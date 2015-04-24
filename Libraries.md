@@ -19,11 +19,11 @@ Currently the libraries that come with the IDE work, (with some caveats), Howeve
 * Adafruit_ILI9341_STM - Working, further modified to use DMA transfers, improving speed. Uses spi port 1
 * ILI9341_due_STM - Based on DUE/Teensy ILI9341 library. Uses DMA and several other optimizations. Also supports multiple font types. Uses more flash and RAM than the standard ILI9341, but performs much better. Recommended for high refresh rates. Uses spi port 1. Should work on Arduino AVR, Due, Teensy, and Maple STM32 boards.
 * Adafruit_GFX_AS - Based on Adafruit GFX_AS library, it adds support for more fonts. Working and tested in Maple mini and ILI9341 display.
-* ILI9163 - Working but pending some updates to SPI library, so it is not added to the main repository yet. Works with and without DMA mode in SPI1. Available at the moment in fork https://github.com/victorpv/TFT_ILI9163C
+* ILI9163 - Working but pending some updates to SPI library, so it is not added to the main repository yet. Works with and without DMA mode in SPI1. Available at the moment in fork https://github.com/victorpv/TFT_ILI9163C. This library requires that either you disable these 3 defines in the .h file: "#define SPI_16BIT" "#define SPI_MODE_DMA 1" "#define SPEED_UP 1" or you download the modified SPI.cpp and SPI.h from https://github.com/victorpv/Arduino_STM32/tree/master/STM32F1/libraries/SPI to replace the SPI files in your libraries folder, as they include several new functions. Performance is greatly improved by using DMA and/or 16bit transfers, but is still fairly good without those.
 
 #####Not working
 
 * RadioHead 
 * RTClock. This library is in the untested sub folder of Libraries, as it currently doesn't compile. It was sourced from GitHub ( see https://github.com/bubulindo/MapleRTC ), however to work, the library needs changes to the core of libmaple, and the replacement core files are not compatible with the latest version of libmaple. 
 * FreeRTOS. Untested. Sources from the original Maple IDE installer. (see also http://forums.leaflabs.com/topic.php?id=221)
-
+* SdFat from https://github.com/victorpv/SdFat or https://github.com/greiman/SdFat. It is partially ported but have some bugs that make it unreliable. Anyone with knowledge can contribute to solve the bugs, or hold on a couple of weeks until they are corrected.
