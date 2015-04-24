@@ -13,26 +13,26 @@
 * Re-start the Arduino IDE, and select the appropriate board from the Tools -> Board menu, and select the appropriate Com port.
 
 ####Linux
-*Copy the Arduino_STM32 folder to the hardware folder in your Arduino sketches folder . If the hardware folder does not exist, please create one.
+* Copy the Arduino_STM32 folder to the hardware folder in your Arduino sketches folder . If the hardware folder does not exist, please create one.
 
-in the ./Arduino_STM32/tools/linux folder set the rights of maple_upload to 755 
+* In the ./Arduino_STM32/tools/linux folder set the rights of maple_upload to 755 
 
-Install DFU-Utils.
+* Install DFU-Utils.
 
-On Ubuntu it has been reported that the standard version of the utils V 0.5 does not work, but V 0.8 does work.
-See the linux page about how to build and install dfu-util
+* On Ubuntu it has been reported that the standard version of the utils V 0.5 does not work, but V 0.8 does work.
+* See the linux page about how to build and install dfu-util
 
-Note. Please read the uploading section related to uploading when using Linux.
+* Note. Please read the uploading section related to uploading when using Linux.
 
 ####Mac OSX
-Arduino_STM32 folder must be place inside ~/Documents/Arduino/hardware (note. if the hardware folder doesn't exist you will need to create it)
-So you should get ~/Documents/Arduino/hardware/Arduino_STM32
+* Arduino_STM32 folder must be place inside ~/Documents/Arduino/hardware (note. if the hardware folder doesn't exist you will need to create it)
+* So you should get ~/Documents/Arduino/hardware/Arduino_STM32
 
-Install DFU Utils. The easiest way to do this is to use Homebrew  http://brew.sh/ - see the bottom of the Homebrew page.
+* Install DFU Utils. The easiest way to do this is to use Homebrew  http://brew.sh/ - see the bottom of the Homebrew page.
 
-Then type "brew install dfu-util" in the terminal window to install
+* Then type "brew install dfu-util" in the terminal window to install
 
-See also http://dfu-util.sourceforge.net/
+* See also http://dfu-util.sourceforge.net/
 
-Note. The if you install DFU Utils using another method than Homebrew the installed location may be different, and you may need to edit the scripts in the tools/osx folder
+* Note. The if you install DFU Utils using another method than Homebrew the installed location may be different, and you may need to edit the scripts in the tools/osx folder
 
