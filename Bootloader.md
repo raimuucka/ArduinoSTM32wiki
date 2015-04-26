@@ -7,10 +7,21 @@ Currently the changes are still being tested, but the targets are:
 
 To test the new bootloader follow the steps below. To learn all the details, go to the Arduino forum thread to learn about the changes needed.
 Please note this is still a beta version and you may need to upload the bootloader again if bugs are found.
+Some notes:
+The Maple Mini bootloader support 2 upload modes, selected by the uploader program with a parameter called Upload ID.
+Upload ID=0 is for uploads to RAM.
+Upload ID=1 is for uploads to Flash. It uploads sketches to 0x8005000, thus reserving the initial 20KB of the flash memory for itself. It also reserves the initial 3KB of ram, so sketches can use up to 17KB.
+
+### Previous Beta version status:
+The initial bootloader 2 betas used ID=1 to upload and run sketches from 0x8002000. It allows to use 120KB for sketches.
+That is the same upload ID that the original bootloader used for uploading sketches to 0x8005000.
+
 
 ### Current status:
-The latest version of the uploader takes exactly 7000 bytes.
+The latest version of the uploader takes exactly 7000 bytes, but reserves the initial 8KB of flash, thus leaving 120KB for sketches.
 We have added a new upload id (id=2), which load the sketch to 0x8002000.
+It is compatible with the old bootloader, so if the uploader tool selects ID=1, the bootloader will load and execute the sketch from 0x8005000, and so only 108KB of flash are available for the sketches.
+
 To use the extra flash available, you need the following:
 * Latest version of the uploader
 * A board definition file that uses the new id=2, new flash maximum, and new ram maximum:
