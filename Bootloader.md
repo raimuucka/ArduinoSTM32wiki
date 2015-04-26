@@ -27,7 +27,7 @@ MEMORY
 # How to get to the new bootloader installed:
 
 There are several possible situations, first using a sketch:
-### 1. You have a Maple mini with the original bootloader:
+### You have a Maple mini with the original bootloader:
        Download this files, and upload the sketch to your Maple mini:
          https://github.com/victorpv/Arduino_STM32/tree/master/maple_mini_bootloader
 Once you install the sketch to the Maple mini, open the Serial monitor, it will provide additional information in through the USB serial. You will need to confirm that you want to overwrite the existing bootloader, and if everything goes fine it will let you know it is finished and you can reboot. The update is almost instantaneous.
@@ -39,8 +39,10 @@ After you have uploaded, you need to upload your boards.txt definition, and your
  * After you upload the bootloader, the upload ID=1 is exactly like the original bootloader (108KB available, ROM starts at 0x8005000), and a new ID=2 has been created for uploads to 0x8002000, so you need to either download the latest full repo, to have both options in the Arduino IDE, or at least edit your boards.txt file and linker script as described above.
  * You specially need to be sure that for a menu option using the new flash and ram, and a linker script using flash at 8002000 your Upload ID is 2, and not 1.
 
-### 2. If you are uploading with ST-Link, then use the bin file from:
-https://github.com/victorpv/Arduino_STM32/tree/master/maple_mini_bootloader
+### If you are uploading with ST-Link:
+
+Then use the bin file from:
+     https://github.com/victorpv/Arduino_STM32/tree/master/maple_mini_bootloader
 
  * After you load that uploader, the upload ID=1 is exactly like the original bootloader (108KB available, ROM starts at 0x8005000), and a new ID=2 has been created for uploads to 0x8002000, so you need to either download the latest full repo, to have both options in the Arduino IDE, or at least edit your boards.txt file and linker script as described above.
  * You specially need to be sure that for a menu option using the new flash and ram, and a linker script using flash at 8002000 your Upload ID is 2, and not 1.
