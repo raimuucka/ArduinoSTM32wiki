@@ -1,4 +1,5 @@
 ### A modified bootloader is being developed as an effort to increase the Flash and RAM available for sketches.
+### Please note that changing the bootloader may render the board unusable unless you can re-write the bootloader by other means (ST-Link or perpetual bootloader mode with Serial connection to UART1, not Serial USB). Change the bootloader only if you are confident with the process.
 
 Currently the changes are still being tested, but the targets are:
 * Maintain compatibility with older bootloader.
