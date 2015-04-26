@@ -28,8 +28,9 @@ MEMORY
 
 There are several possible situations, first using a sketch:
 ### You have a Maple mini with the original bootloader:
-       Download this files, and upload the sketch to your Maple mini:
+Download this files, and upload the sketch to your Maple mini:
          https://github.com/victorpv/Arduino_STM32/tree/master/maple_mini_bootloader
+
 Once you install the sketch to the Maple mini, open the Serial monitor, it will provide additional information in through the USB serial. You will need to confirm that you want to overwrite the existing bootloader, and if everything goes fine it will let you know it is finished and you can reboot. The update is almost instantaneous.
 After you have uploaded, you need to upload your boards.txt definition, and your linker script. If you don't know how to update those manually, upload the latest version of this full repository, which include the updates.
 
