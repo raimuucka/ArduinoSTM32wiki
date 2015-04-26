@@ -45,7 +45,7 @@ Download the sketch and .h files from this repo, and upload the sketch to your M
 Once you install the sketch to the Maple mini, open the Serial monitor, it will provide additional information in through the USB serial. You will need to confirm that you want to overwrite the existing bootloader, and if everything goes fine it will let you know it is finished and you can reboot. The update is almost instantaneous.
 After you have uploaded, you need to upload your boards.txt definition, and your linker script. If you don't know how to update those manually, upload the latest version of this full repository, which include the updates.
 
-2. You have a Maple Mini with one of the beta versions that only included the option to upload to 8002000, and did not add the new upload id 2:
+### You have a Maple Mini with one of the beta versions that only included the option to upload to 8002000, and did not add the new upload id 2:
  * In that case it is likely that you already have changed you boards.txt file and linker script for the new address. If you have not, then no sketch will run.
  * Download the sketch from step 1, and update by running that sketch.
  * After you upload the bootloader, the upload ID=1 is exactly like the original bootloader (108KB available, ROM starts at 0x8005000), and a new ID=2 has been created for uploads to 0x8002000, so you need to either download the latest full repo, to have both options in the Arduino IDE, or at least edit your boards.txt file and linker script as described above.
