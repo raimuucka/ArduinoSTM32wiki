@@ -27,19 +27,16 @@ It is compatible with the old bootloader, so if the uploader tool selects ID=1, 
 To use the extra flash available, you need the following:
 * Latest version of the uploader
 * A board definition file that uses the new id=2, new flash maximum, and new ram maximum:
-      ...upload.altID=2
-      ...upload.ram.maximum_size=20480
-      ...upload.flash.maximum_size=122880
+`      ...upload.altID=2`
+      `...upload.ram.maximum_size=20480`
+      `...upload.flash.maximum_size=122880`
 * A new linker script or a modified one, with the new starting address for the sketches and the new maximum RAM:
 
-MEMORY
-{
-
-  ram (rwx) : ORIGIN = 0x20000000, LENGTH = 20K
-
-  rom (rx)  : ORIGIN = 0x08002000, LENGTH = 120K
-
-}
+`      MEMORY`
+`      {`
+`        ram (rwx) : ORIGIN = 0x20000000, LENGTH = 20K`
+`        rom (rx)  : ORIGIN = 0x08002000, LENGTH = 120K`
+`      }`
 
 # How to get to the new bootloader installed:
 
@@ -65,7 +62,7 @@ Then use the bin file from:
  * After you load that uploader, the upload ID=1 is exactly like the original bootloader (108KB available, ROM starts at 0x8005000), and a new ID=2 has been created for uploads to 0x8002000, so you need to either download the latest full repo, to have both options in the Arduino IDE, or at least edit your boards.txt file and linker script as described above.
  * You specially need to be sure that for a menu option using the new flash and ram, and a linker script using flash at 8002000 your Upload ID is 2, and not 1.
 
-### How to revert to the original bootloader:
+# How to revert to the original bootloader:
 * Option 1, use ST-Link to upload it.
 * Option 2, use perpetual bootloader mode and UART1 to upload it.
 * Option 3, not ready yet, use a sketch uploaded to 8005000 to overwrite the new bootloader with the original one. Such sketch can be done easily, but is not done yet.
