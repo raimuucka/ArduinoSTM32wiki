@@ -24,6 +24,6 @@ MEMORY
   rom (rx)  : ORIGIN = 0x08002000, LENGTH = 120K
 }
 
-### How to get to the new bootloader installed:
+## How to get to the new bootloader installed:
 ####
 
