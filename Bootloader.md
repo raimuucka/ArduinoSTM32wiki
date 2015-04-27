@@ -32,8 +32,7 @@ To use the extra flash available, you need the following:
       ...upload.flash.maximum_size=122880`
 * A new linker script or a modified one, with the new starting address for the sketches and the new maximum RAM:
 
-`
-      MEMORY
+`      MEMORY
 
       {
 
