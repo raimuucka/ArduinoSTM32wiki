@@ -33,13 +33,9 @@ To use the extra flash available, you need the following:
 * A new linker script or a modified one, with the new starting address for the sketches and the new maximum RAM:
 
 `      MEMORY`
-
       `{`
-
         `ram (rwx) : ORIGIN = 0x20000000, LENGTH = 20K`
-
         `rom (rx)  : ORIGIN = 0x08002000, LENGTH = 120K`
-
       `}`
 
 # How to get to the new bootloader installed:
