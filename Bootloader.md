@@ -38,7 +38,7 @@ To use the extra flash available, you need the following:
         `rom (rx)  : ORIGIN = 0x08002000, LENGTH = 120K`
       `}`
 
-# How to get to the new bootloader installed:
+# How to install the new bootloader:
 
 There are several possible situations, first using a sketch:
 ### You have a Maple mini with the original bootloader:
