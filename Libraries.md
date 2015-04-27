@@ -29,4 +29,4 @@ Currently the libraries that come with the IDE work, (with some caveats), Howeve
 * RadioHead 
 * RTClock. This library is in the untested sub folder of Libraries, as it currently doesn't compile. It was sourced from GitHub ( see https://github.com/bubulindo/MapleRTC ), however to work, the library needs changes to the core of libmaple, and the replacement core files are not compatible with the latest version of libmaple. 
 * FreeRTOS. Untested. Sources from the original Maple IDE installer. (see also http://forums.leaflabs.com/topic.php?id=221)
-* Latest SdFat from Greiman, https://github.com/greiman/SdFat. It is partially ported but have some bugs that make it unreliable. An corrected version is linked above in the "Working" section, although needs more testing.
+* Latest SdFat from Greiman, https://github.com/greiman/SdFat. It is partially ported but have some bugs that make it unreliable. A corrected version is linked above in the "Working" section, although needs more testing.
