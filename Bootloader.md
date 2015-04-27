@@ -27,9 +27,9 @@ It is compatible with the old bootloader, so if the uploader tool selects ID=1, 
 To use the extra flash available, you need the following:
 * Latest version of the uploader
 * A board definition file that uses the new id=2, new flash maximum, and new ram maximum:
-`      ...upload.altID=2`
-      `...upload.ram.maximum_size=20480`
-      `...upload.flash.maximum_size=122880`
+`      ...upload.altID=2
+      ...upload.ram.maximum_size=20480
+      ...upload.flash.maximum_size=122880`
 * A new linker script or a modified one, with the new starting address for the sketches and the new maximum RAM:
 
 `
