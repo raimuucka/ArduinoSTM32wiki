@@ -1,6 +1,6 @@
 ###All OS's
 
-* Download and install the latest stable version of the Arduino Beta from [here](http://arduino.cc/en/Main/Software)
+* Download and install the latest stable version of the Arduino IDE from [here](http://arduino.cc/en/Main/Software)
 * (1.6.3 or newer) - On the Tools menu, select the Boards manager, and install the Arduino Due from the list of available boards.
 * Download zip file containing the STM32 files from [here](https://github.com/rogerclarkmelbourne/Arduino_STM32/archive/master.zip)
 * Unzip to create the Arduino_STM32 folder
