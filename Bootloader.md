@@ -1,72 +1,49 @@
-### A modified bootloader is being developed as an effort to increase the Flash and RAM available for sketches.
-### Please note that changing the bootloader may render the board unusable unless you can re-write the bootloader by other means (ST-Link or perpetual bootloader mode with Serial connection to UART1, not Serial USB). Change the bootloader only if you are confident with the process.
+### A modified "maple" bootloader has been developed as an effort to increase the Flash and RAM available for sketches.
+### Please note that changing the bootloader may render the board unusable unless you can re-flash the bootloader by other means (ST-Link or perpetual bootloader mode with Serial connection to UART1, not Serial USB). Change the bootloader only if you are confident with the process.
 
-Currently the changes are still being tested, but the targets of the Bootloader project are:
-* Maintain compatibility with older bootloader.
-* Increase the RAM available to sketches to the full 20KB in the Maple Mini. This change depends on the above.
-* Increade the Flash available for sketches to 120KB, reserving only 8KB for the bootloader.
+The details of the new bootloader are :
+* Maintains compatibility with uploading from the Maple IDE (for upload to Flash only)
+* Increases the RAM available to sketches to the full 20KB in the Maple Mini.
+* Increads the Flash available for sketches to 120KB, reserving only 8KB for the bootloader.
 
-To test the new bootloader follow the steps below. To learn all the details, go to the Arduino forum thread to learn about the changes needed.
+To try the new bootloader follow the steps below. To learn all the details, go to the Arduino forum thread to learn about the changes needed.
 Please note this is still a beta version and you may need to upload the bootloader again if bugs are found.
 
 Some notes:
 The Maple Mini original bootloader supports 2 upload modes, selected by the uploader program with a parameter called Upload ID.
-Upload ID=0 is for uploads to RAM.
-Upload ID=1 is for uploads to Flash. It uploads sketches to 0x8005000, thus reserving the initial 20KB of the flash memory for itself. It also reserves the initial 3KB of ram, so sketches can use up to 17KB.
+Upload ID=0 uploads to RAM. (This option has been modified so that it returns an error if used - more details below)
+Upload ID=1 uploads to Flash. It uploads sketches to 0x8005000, thus reserving the initial 20KB of the flash memory for itself. It also reserves the initial 3KB of ram, so sketches can use up to 17KB.
 
-### Previous Beta version status:
-The initial bootloader 2 betas used ID=1 to upload and run sketches from 0x8002000. It allows to use 120KB for sketches.
-That is the same upload ID that the original bootloader used for uploading sketches to 0x8005000.
+We added a new upload mode.
+
+Upload ID=2 uploads to Flash. It uploads sketches to 0x8002000, thus reserving the initial 8KB of the flash memory for itself. The bootloader no longer operates with upload to RAM, and hence all RAM in the process is always available to the sketch.
+
+To make use of the new bootloader reduce footprint etc, you need to use an up to date version of the repo, as it has additional menu options for the Maple mini and also for generic boards.
+
+On the Maple mini there is a bootloader menu, which lets you select the original or new bootloader.
+On generic boards, the new bootloader (called the stm32duino bootloader) is available as an upload option. This option always uses Upload ID = 2 (see above)
 
 
-### Current status:
-The latest version of the uploader takes exactly 7000 bytes, but reserves the initial 8KB of flash, thus leaving 120KB for sketches.
-We have added a new upload id (id=2), which load the sketch to 0x8002000.
-It is compatible with the old bootloader, so if the uploader tool selects ID=1, the bootloader will load and execute the sketch from 0x8005000, and so only 108KB of flash are available for the sketches.
+## Removal for Upload to RAM
+There were a number of issues with using upload to RAM, and although its ID has been retained so that uploads to ram don't crash the IDE etc, it no longer does anything, and just returns and error to the uploader.
+Upload to RAM on Maple Mini and Maple boards was always almost completely useless, as the Maple mini only has 20k RAM, and most usable sketches take at least 20k. However the main reason this has been disabled, is that there were issues with the bootloader being able to determine after a warm boot, whether it should run code in RAM or Flash. The original code, relied on looking in the RAM for markers that suggested that the data at that location was a program, however this wasn't that reliable. Although it would be possible to use the backup registers (non volatile after soft boot) to store data about program start location, it was felt that as the RAM was so limited, it wasn't worth the hassle of rebuilding the RAM upload option to use backup ram as a flag) - and the sketch code could still overwrite the backup registers and break this option.
 
-To use the extra flash available, you need the following:
-* Latest version of the uploader
-* A board definition file that uses the new id=2, new flash maximum, and new ram maximum:
-`      ...upload.altID=2
-      ...upload.ram.maximum_size=20480
-      ...upload.flash.maximum_size=122880`
-* A new linker script or a modified one, with the new starting address for the sketches and the new maximum RAM:
-
-`      MEMORY`
-      `{`
-        `ram (rwx) : ORIGIN = 0x20000000, LENGTH = 20K`
-        `rom (rx)  : ORIGIN = 0x08002000, LENGTH = 120K`
-      `}`
 
 # How to install the new bootloader:
 
-There are several possible situations, first using a sketch:
-### You have a Maple mini with the original bootloader:
-Download the sketch and .h files from this repo, and upload the sketch to your Maple mini:
-         https://github.com/victorpv/Arduino_STM32/tree/master/maple_mini_bootloader
+Currently the only way to install the new bootloader is to flash your board using USB to Serial or STLink (or another SWD device e.g. JTAG or Black Magic Probe etc).
 
-Once you install the sketch to the Maple mini, open the Serial monitor, it will provide additional information in through the USB serial. You will need to confirm that you want to overwrite the existing bootloader, and if everything goes fine it will let you know it is finished and you can reboot. The update is almost instantaneous.
-After you have uploaded, you need to upload your boards.txt definition, and your linker script. If you don't know how to update those manually, upload the latest version of this full repository, which include the updates.
+Firstly you need to download the Bootloader that matches your board See
 
-### You have a Maple Mini with one of the beta versions that only included the option to upload to 8002000, and did not add the new upload id 2:
- * In that case it is likely that you already have changed you boards.txt file and linker script for the new address. If you have not, then no sketch will run.
- * Download the sketch from step 1, and update by running that sketch.
- * After you upload the bootloader, the upload ID=1 is exactly like the original bootloader (108KB available, ROM starts at 0x8005000), and a new ID=2 has been created for uploads to 0x8002000, so you need to either download the latest full repo, to have both options in the Arduino IDE, or at least edit your boards.txt file and linker script as described above.
- * You specially need to be sure that, for a menu option using the new flash and ram and a linker script using flash at 8002000, your Upload ID is 2 and not 1.
+https://github.com/rogerclarkmelbourne/STM32duino-bootloader/tree/master/STM32F1/binaries
+e.g. for Maple mini, the bootloader is maple_mini_boot20.bin
 
-### If you are uploading with ST-Link:
+If you have a generic board, not a Maple or Maple mini see the section in the wiki about the use of the stm32duino bootloader on generic boards
 
-Then use the bin file from:
-     https://github.com/rogerclarkmelbourne/Arduino_STM32/tree/master/usb_bootloader/STM32F1/binaries
-
- * After you load that uploader, the upload ID=1 is exactly like the original bootloader (108KB available, ROM starts at 0x8005000), and a new ID=2 has been created for uploads to 0x8002000, so you need to either download the latest full repo, to have both options in the Arduino IDE, or at least edit your boards.txt file and linker script as described above.
- * You specially need to be sure that for a menu option using the new flash and ram, and a linker script using flash at 8002000 your Upload ID is 2, and not 1.
 
 # How to revert to the original bootloader:
-* Option 1, use ST-Link to upload it.
-* Option 2, use perpetual bootloader mode and UART1 to upload it.
-* Option 3, not ready yet, use a sketch uploaded to 8005000 to overwrite the new bootloader with the original one. Such sketch can be done easily, but is not done yet.
 
+Download the original Maple mini bootloader from the leaflabs site and re-flash using USB to Serial, or STLink etc.
 
 
 
