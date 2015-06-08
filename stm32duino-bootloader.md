@@ -42,13 +42,10 @@ If your board has the LED on a different pin, use the bin file that matches your
 After the board has been flashed, you can remove the USB to Serial adaptor, set Boot0 to Low, and connect via USB. 
 However prior to connecting on Windows, you should also install the windows "driver" stub files, (see /Arduino_ST32/driver/win batch file)
 
-After the drivers are installed... When you connect your generic board; Windows should initially recognise it as a libUSB Maple DFU device, the LED should flash quickly 6 times, After this the bootloader will continue to flash the LED at a slighly slower rate. 
+After the drivers are installed... When you connect your generic board; Windows should initially recognise it as a libUSB Maple DFU device, the LED should flash quickly 6 times, After this the bootloader will continue to flash the LED at a slighly slower rate. The slower flashing indicates the bootloader has not found an existing sketch and is waiting for an upload. In the Windows device manager you should see a libUSB Maple DFU device.
 
-In the Arduino LED, select your generic board from the menu, e.g. Generic STM32F103C series, then select Stm32duino bootloader from the upload menu.
+In the Arduino IDE, select your generic board from the menu, e.g. Generic STM32F103C series, then select Stm32duino bootloader from the upload menu.
 
-Open the Blink example, change the LED pin from 13 to whichever pin your LED is on.
-Upload the sketch, but initially the upload will fail. 
-What you need to do at this point is press the reset button on the board at the point the upload has just started, this will switch the bootloader into upload mode and the sketch will upload, and you will see the Maple Serial device appear in your Windows device manager and the LED should blink if you have loaded the blink sketch.
 
 If your board doesn't appear on USB at all, I'm afraid either its not supported or its faulty.
 Some cheap boards seem to lack even the most rudimentary usb hardware e.g. the necessary pullup resistors; so unless you are handy with a soldering iron, these boards will probably never work with the bootloader.
