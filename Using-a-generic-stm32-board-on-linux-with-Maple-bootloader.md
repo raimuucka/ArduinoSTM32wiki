@@ -1,3 +1,6 @@
+##This information has now been superseded. Please see the page on the stm32duino bootloader in the wiki.
+
+
 Details from @ahull on the Arduino forum on how its possible to install and use the Maple bootloader on a generic STM32 board (one that doesn't have the Maple USB reset hardware) on Linux
 
 Using the maple bootloader under Linux to allow access to the USB serial port on generic STM32 boards with the maple bootloader installed to them (should also work with genuine Maple boards).
