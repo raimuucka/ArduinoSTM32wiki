@@ -1,4 +1,36 @@
+###Update
 
+This information applies to Linux users, using Maple mini boards, or anyone who has installed the new stm32duino bootloader onto any other board.
+
+The repo now contains pre-compiled versions of dfu-util, so the instructions below should not be needed. However if you find an issue with the dfu-binaries, please refer to the details below about how to compile the dfu-util binaries.
+
+DFU is the protcol / system used to upload sketches.
+
+####Install on Linux should now onlu reqiure these additional steps
+
+After copying the Arduino_STM32 files to ~/Arduino/hardware open the shell / terminal and cd to ~/Arduino/hardware/Arduino_STM32/drivers/linux and run the 
+
+```install-udev-rules.sh```
+
+ script. (you will need to enter your admin password as this change needs admin rights as it copies the udev rules file).
+You may also need to add your user to the dialout group. i.e on some Linux distro's normal users are apart of the dialout group, ie users who can use modems and other serial devices; However this is not the case on all distro's and it appears that Linux Mint may not put regular users in the dialout group.
+
+So, if the IDE appears not to be able to access the Serial port associated with the Maple mini (or generic board + stm32duino bootloader)... 
+Please add your current user to the dialout group.
+This can be done by finding out your current user using the shell command
+
+```whomi```
+
+Then adding this user to the dialout group e.g.
+
+```sudo adduser my_user dialout```
+
+You may need to reboot after adding you user to the dialout group before it takes effect
+
+For support please register and post to www.STM32duino.com
+
+
+____________________________  OLD DFU information for reference purposes only ___________________
 
 DFU Util on most linux distro's won't work, possibly because its too old
 
