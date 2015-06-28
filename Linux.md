@@ -30,7 +30,7 @@ You may need to reboot after adding you user to the dialout group before it take
 For support please register and post to www.STM32duino.com
 
 
-____________________________  OLD DFU information for reference purposes only ___________________
+####OLD DFU information for reference purposes only ___________________
 
 DFU Util on most linux distro's won't work, possibly because its too old
 
