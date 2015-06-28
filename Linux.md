@@ -19,11 +19,11 @@ So, if the IDE appears not to be able to access the Serial port associated with 
 Please add your current user to the dialout group.
 This can be done by finding out your current user using the shell command
 
-```whomi```
+whomi
 
 Then adding this user to the dialout group e.g.
 
-```sudo adduser my_user dialout```
+sudo adduser my_user dialout
 
 You may need to reboot after adding you user to the dialout group before it takes effect
 
