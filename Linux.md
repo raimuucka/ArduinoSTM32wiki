@@ -10,7 +10,7 @@ DFU is the protcol / system used to upload sketches.
 
 After copying the Arduino_STM32 files to ~/Arduino/hardware open the shell / terminal and cd to ~/Arduino/hardware/Arduino_STM32/drivers/linux and run the 
 
-```install-udev-rules.sh```
+install-udev-rules.sh
 
  script. (you will need to enter your admin password as this change needs admin rights as it copies the udev rules file).
 You may also need to add your user to the dialout group. i.e on some Linux distro's normal users are apart of the dialout group, ie users who can use modems and other serial devices; However this is not the case on all distro's and it appears that Linux Mint may not put regular users in the dialout group.
