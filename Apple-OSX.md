@@ -1,17 +1,11 @@
 Some notes about use with OSX
 
-If you are using a Maple or Maple mini board, and the Maple bootloader
+tools/macosx now contains dfu-util so there is now need to use Homebrew etc to install it
 
-1. You will need to install the DFU driver. See the installation section on how to do this
-2. Serial should work OK without any additional drivers, and will appear as tty.usbModemxxxxx (where xxxxx seems to vary)
+If you are uploading via a USB to Serial adaptor, you will need to load the appropriate driver for your adaptor, and select that device.
+There have been reports of some USB to Serial adaptors not working correctly with some versions of OSX - this seems to be a driver issue with FDTI based devices - so please check you have the latest drivers if you encounter this issue.
+Also note, that some USB to Serial devices appear with names starting with "tty", the upload reset utility does not work with tty devices. Please select the "cu" device for your board rather than the tty device
 
-There seem to be issues with the IDE no longer resetting the board via the Serial interface, so its likely that you board will need to be put into "perpetual bootloader" mode by resetting the board and pressing the button while the led is blinking quickly. The and then releasing the "button" as soon as the led begins to blink more slowly.
-
-Currently not all other upload methods work "out of the box". 
-
-Uploading via USB to Serial does work, but only for the "STM32 to Flash - no bootloader" board type.
-
-If you are uploading via a USB to Serial adaptor, you will need to load the appropriate driver for your adaptor, and select that device
-
-Uploading via STLink uses texane-stlink which doesn't appear to require a driver, however the only board type which is set to use STLink is the Nucleo F103RB board type
-
+STLink does not seem to work with all boards. This appears to be an issue with Texane-stlink (open source stlink driver).
+Unfortunately STM don't support STLink uploads on OSX, so if your board does not work with STLink, I'm afraid there is not a lot you can do, except perhaps contact the Texane-stlink dev guys.
+ 
