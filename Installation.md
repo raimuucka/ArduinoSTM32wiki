@@ -24,11 +24,4 @@ Note. If you do not see a Maple Serial com device, this is probably because the 
 ####Mac OSX
 * Arduino_STM32 folder must be placed inside ~/Documents/Arduino/hardware (note. if the hardware folder doesn't exist you will need to create it)
 * So you should get ~/Documents/Arduino/hardware/Arduino_STM32
-
-* Install DFU Utils. The easiest way to do this is to use Homebrew  http://brew.sh/ - see the bottom of the Homebrew page.
-
-* Then type "brew install dfu-util" in the terminal window to install
-
-* See also http://dfu-util.sourceforge.net/
-
-* Note. The if you install DFU Utils using another method than Homebrew the installed location may be different, and you may need to edit the scripts in the tools/osx folder
+* Note. DFU util binaries have now been added to the repo, in tools/macosx/dfu-util, so there is no longer a need to install Homebrew to then install dfu-util, or to compile dfu-util from source.
