@@ -48,8 +48,13 @@ Next, clone the git repo, note the instruction for this on the  http://dfu-util.
 
 git clone https://gitorious.org/dfu-util/dfu-util.git
 
-This repo is currently (14/07/15) being migrated to https://archive.org/
+fatal: repository 'https://gitorious.org/dfu-util/dfu-util.git/' not found
+
+This repo shutdown at the end of May and has migrated to https://archive.org/
 as of 2100BST it's to be found as
+
+https://web.archive.org/web/20150331161734/https://gitorious.org/dfu-util
+suggeested action is to use 'mirror'
 
 git clone http://git.code.sf.net/p/dfu-util/dfu-util dfu-util-dfu-util
 
