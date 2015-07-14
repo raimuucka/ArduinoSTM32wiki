@@ -6,7 +6,7 @@ The repo now contains pre-compiled versions of dfu-util, so the instructions bel
 
 DFU is the protcol / system used to upload sketches.
 
-####Install on Linux should now onlu reqiure these additional steps
+####Install on Linux should now only require these additional steps
 
 After copying the Arduino_STM32 files to ~/Arduino/hardware open the shell / terminal and cd to ~/Arduino/hardware/Arduino_STM32/drivers/linux and run the 
 
@@ -19,13 +19,13 @@ So, if the IDE appears not to be able to access the Serial port associated with 
 Please add your current user to the dialout group.
 This can be done by finding out your current user using the shell command
 
-whomi
+whoami
 
 Then adding this user to the dialout group e.g.
 
 sudo adduser my_user dialout
 
-You may need to reboot after adding you user to the dialout group before it takes effect
+You may need to reboot after adding your user to the dialout group before it takes effect
 
 For support please register and post to www.STM32duino.com
 
@@ -47,6 +47,11 @@ cd ~/Sandbox
 Next, clone the git repo, note the instruction for this on the  http://dfu-util.sourceforge.net/build.html page is incorrect, the correct command is below.
 
 git clone https://gitorious.org/dfu-util/dfu-util.git
+
+This repo is currently (14/07/15) being migrated to https://archive.org/
+as of 2100BST it's to be found as
+
+git clone http://git.code.sf.net/p/dfu-util/dfu-util dfu-util-dfu-util
 
 You should see something like this..
 
