@@ -19,12 +19,12 @@ Notes
 
 (1) The bootloader automatically senses the size of flash in the device onto which its loaded and infers the flash page size (1k for devices up to 128k flash, and 2k page size for > 128k flash size0
 
-(2) You can optionally fit a button which will force the bootloader into "perpetual bootloader mode". This is the leaflabs name for the bootloader being forced into waiting for a DFU upload, rather then existing the bootloder 1/2 second after startup, and running the user code (at 0x8002000).
+(2) You can optionally fit a button which will force the bootloader into "perpetual bootloader mode". This is the leaflabs name for the bootloader being forced into waiting for a DFU upload, rather then exiting the bootloder 1/2 second after startup, and running the user code (at 0x8002000).
 The Button needs to be on pin PC14.
 If you have something attached to PC14 which will pull this pin high at boot time, you may need to rebuild the bootloader to change the pin for the Button, or remove the button functionality from the bootloader altogether.
 
 
-#####Installing the stm32duino bootloader.
+#####Installing the stm32duino bootloader 
 
 The bootloader bin needs to be "flashed" onto generic boards as they usually do not contain any form of bootloader. 
 
@@ -34,7 +34,7 @@ On Windows. Open a command prompt and CD to the repo install directory, in My Do
 
 Then run the exe
 
-stm32flash.exe -w ..\..\STM32duino-bootloader\STM32F1\binaries\generic_boot20_pc13.bin COM_XXXX
+    stm32flash.exe -w ..\..\STM32duino-bootloader\STM32F1\binaries\generic_boot20_pc13.bin COM_XXXX
 
 Where COM_XX is the windows com port e.g. COM14 of your USB to serial device, 
 If your board has the LED on a different pin, use the bin file that matches your board.
