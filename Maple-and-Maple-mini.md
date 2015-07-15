@@ -8,9 +8,7 @@ As the hardware designs for these boards is open source and available on the [Gi
 
 The Maple and Maple mini differ from other generic aka "minimum development" boards, as they have additional electronics connected to the USB connector. This additional hardware and the use of a custom bootloader, (developed my Leaflabs), allow the USB port to be used as a virtual Serial device and also allow uploads via USB (DFU)
 
-To use the Maple mini (including clones), windows drivers for both the USB Serial and DFU upload need to be installed.  However there is a problem with this on Windows 7 onwards, because the drivers are not digitally signed and Windows will not install them.
-
-The work-around is to disable "Device driver signing enforcement", however this does cause a slight security risk. There are various methods to do this [See](https://social.technet.microsoft.com/Forums/windows/en-US/9b6eee60-855d-47cc-9927-acae3fb6f971/permanently-disable-driver-signature-enforcement-on-win-7-x64?forum=w7itprohardware)
+To use the Maple mini (including clones), windows drivers for both the USB Serial and DFU upload need to be installed.  See the installation page for how to install the drivers for Windows and the Linux usb device installation script. (Note OSX doesn't need any installation of drivers etc)
 
 
 ####Changes from the original version of Maple IDE
@@ -19,3 +17,4 @@ Some changes have been made to the API to make everything more compatible with t
 
 * SerialUSB is now just called Serial
 * HardwareSPI is now called SPI and does not need to be instantiated as part of the sketch, as its instantiated as part of the SPI class when it is included via #include <SPI.h>
+* Referenced to the BOARD LED and the BUTTON have been removed from the core headers because they only apply to the Maple and Maple mini 
