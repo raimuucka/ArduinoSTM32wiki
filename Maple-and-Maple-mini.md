@@ -1,4 +1,4 @@
-The Maple and Maple mini were originally developed my [Leaflabs](http://www.leaflabs.com/about-maple/)
+The Maple and Maple mini were originally developed by [Leaflabs](http://www.leaflabs.com/about-maple/)
 
 Details of the original Maple can be found [here](http://leaflabs.com/docs/hardware/maple.html)
 Details of the original Maple mini can be found [here](http://leaflabs.com/docs/hardware/maple-mini.html)
