@@ -152,9 +152,9 @@ _**> dump_image dump.bin 0x08000000 0x1ffff**_
 
 We have *complete* control, so we can now program the device... so why not flash the maple bootloader on it?
 
-Grab the bootloader for the Maple Mini from here... 
+Grab a suitable bootloader for the board from here.. 
 
-http://static.leaflabs.com/pub/leaflabs/maple-bootloader/maple_boot.bin
+https://github.com/rogerclarkmelbourne/STM32duino-bootloader/tree/master/STM32F1/binaries
 
 Then upload it to the device... halt it first... 
 
