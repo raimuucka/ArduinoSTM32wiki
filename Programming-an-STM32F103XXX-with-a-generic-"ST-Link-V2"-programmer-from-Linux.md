@@ -117,7 +117,7 @@ Next we need to run openocd, but since I had no clue how this works, I opted to 
 
 In another terminal window we telnet to the openocd console on port 4444
 
-**telnet 4444**
+**telnet localhost 4444**
 
 Now while that is running, we need to do a couple of things in the correct order
 
