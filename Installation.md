@@ -10,7 +10,7 @@
 * Copy the Arduino_STM32 folder to My Documents/Arduino/hardware (note. if the hardware folder doesn't exist you will need to create it)
 
 * If using Maple or Maple mini, you need to install drivers for the Serial and DFU (upload devices). Please run drivers/win/install_drivers.bat 
-Note. This doesn't actually install drivers. Windows comes pre-installed with a compatible Serial USB driver and a DFU (upload) driver. However the built in drivers need to be associated with the USB ID of the Maple serial and DFU devices. The batch file and wdi-simple.exe do the clever stuff to convince Windows 7 or newer, that it should use its drivers with the Maple serial and DFU devices.
+Note. This doesn't actually install drivers. Windows comes pre-installed with a compatible Serial USB driver and a DFU (upload) driver. However the built in drivers need to be associated with the USB ID of the Maple serial and DFU devices. The batch file and wdi-simple.exe do the clever stuff to convince Windows 7 or newer, that it should use its drivers with the Maple serial and DFU devices(Run install_drivers.bat in the "drivers/win" folder).
 
 * Re-start the Arduino IDE, and select the appropriate board from the Tools -> Board menu, and select the appropriate Com port for your Maple mini or serial upload device.
 Note. If you do not see a Maple Serial com device, this is probably because the Maple mini has not been loaded with the blink sketch. So upload a the Maple mini blink sketch from examples\Digital\Blink and the Maple serial device should now be available on the Port menu.
