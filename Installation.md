@@ -1,7 +1,7 @@
 ###All OS's
 
 * Download and install the latest stable version of the Arduino IDE from [here](http://arduino.cc/en/Main/Software)
-* Run the IDE, and on the Tools menu, select the Boards manager, and install the Arduino Due from the list of available boards.
+* Run the IDE, and on the Tools menu, select the Boards manager, and install the Arduino Due from the list of available boards. You must do this step, it installs the arm-none-eabi-g++ toolchain!
 * Download zip file containing the STM32 files from [here](https://github.com/rogerclarkmelbourne/Arduino_STM32/archive/master.zip)
 * Unzip to create the Arduino_STM32 folder
 
